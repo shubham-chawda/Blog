@@ -1,9 +1,9 @@
-<%= form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
-  <h2>Add a comment:</h2>
-    <p>
-      <%= form.text_area :comment_message %>
-    </p>
-    <p>
-      <%= form.submit %>
-    </p>
-<% end %>
+<br>
+<div class="col-md-4">
+  <%= bootstrap_form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
+      <p>
+        <%= form.text_area :comment_message, rows:1 %>
+        <%= form.submit "Post Comment", class: "btn btn-secondary btn-sm" %>
+      </p>
+  <% end %>
+</div>
