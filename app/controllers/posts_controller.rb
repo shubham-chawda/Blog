@@ -19,7 +19,7 @@ class PostsController < ApplicationController
 
 	def update
 	  if @post.update(post_params)
-	    redirect_to @post, notice: "Post created successfully"
+	    redirect_to root_url, notice: "Post updated successfully"
 	  else
 	    render 'edit'
 	  end

@@ -2,7 +2,7 @@
 
 <%= form_with(model: [@post, @comment], local: true) do |form| %>
   <p>
-    <%= form.text_area :body %>
+    <%= form.text_area :comment_message %>
   </p>
   <p>
     <%= form.submit %>

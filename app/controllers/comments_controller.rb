@@ -34,7 +34,7 @@ class CommentsController < ApplicationController
 
  private
     def comment_params
-      params.require(:comment).permit(:body)
+      params.require(:comment).permit(:comment_message)
     end
 
     def find_comment_of_post

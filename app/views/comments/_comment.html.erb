@@ -5,11 +5,13 @@
 
 <p>
   <strong>Comment:</strong>
-  <%= comment.body %>
+  <%= comment.comment_message %>
 </p>
-<p>
-  <%= link_to "Edit", edit_post_comment_path(comment.post, comment), class: "btn btn-primary" %>
-  <%= link_to 'Destroy Comment', [comment.post, comment], class: "btn btn-danger",
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
+<% if comment.user == current_user %>
+  <p>
+    <%= link_to "Edit", edit_post_comment_path(comment.post, comment), class: "btn btn-primary" %>
+    <%= link_to 'Destroy Comment', [comment.post, comment], class: "btn btn-danger",
+                 method: :delete,
+                 data: { confirm: 'Are you sure?' } %>
+  </p>
+<% end  %>
