@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to post_path(@post), notice: "Comment Created Successfully"
     else
-      redirect_to post_path(@post), notice: "Something went wrong"
+      redirect_to post_path(@post), notice: @comment.errors.messages[:comment_message].first
     end
  	end
 
