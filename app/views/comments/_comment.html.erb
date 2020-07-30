@@ -1,5 +1,7 @@
 <p>
-  <%= "<b>#{comment.user.name}</b> : #{comment.comment_message}".html_safe %>
+  <% if comment.persisted? %>
+    <%= "<b>#{comment.user.name}</b> : #{comment.comment_message}".html_safe %>
+  <% end  %>
 </p>
 <% if comment.user == current_user %>
   <p>

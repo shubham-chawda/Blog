@@ -1,12 +1,5 @@
 <h1>Edit Comment</h1>
 
-<%= form_with(model: [@post, @comment], local: true) do |form| %>
-  <p>
-    <%= form.text_area :comment_message %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<%= render partial: 'form'%>
 
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Back', posts_path, class: "btn btn-primary btn-sm float-right" %>

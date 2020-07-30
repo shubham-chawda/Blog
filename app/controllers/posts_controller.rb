@@ -34,6 +34,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
+    @comment = @post.comments.build
 	end
 
   def index
