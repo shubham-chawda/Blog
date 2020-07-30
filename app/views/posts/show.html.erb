@@ -2,14 +2,15 @@
   <div class="col-md-3"></div>
   <div class="col-md-6 post">
   <center><h2><%= @post.title %></h2></center><br>
-  <p>
+  <p class="post-body">
     <%= @post.body %>
   </p>
-
+  <br>
+  <h4>Comments</h4>
   <%= render @post.comments %>
 
   <%= render 'comments/form' %>
-
+<br>
   <%= link_to 'Back', posts_path, class: "btn btn-primary btn-sm" %>
   </div>
   <div class="col-md-3"></div>

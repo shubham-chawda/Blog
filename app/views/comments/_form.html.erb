@@ -1,4 +1,5 @@
 <br>
+<div class="row">
 <div class="col-md-4">
   <%= bootstrap_form_with(model: [ @post, @comment], local: true) do |form| %>
       <p>
@@ -6,4 +7,5 @@
         <%= form.submit "Post Comment", class: "btn btn-secondary btn-sm" %>
       </p>
   <% end %>
+</div>
 </div>
