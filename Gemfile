@@ -13,14 +13,17 @@ gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
+
 # for user authentication
 gem 'devise'
-
+#for debugging
 gem 'pry'
 
 gem 'will_paginate'
 
 gem "bootstrap_form"
+
+gem 'bootstrap-sass', '~> 3.4.1'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
@@ -57,10 +60,6 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
-end
-
-group :assets do
-  gem 'twitter-bootstrap-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
